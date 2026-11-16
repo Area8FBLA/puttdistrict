@@ -105,14 +105,15 @@ svg text{font-family:var(--display)}
 .plate.is-rolling .plate__video{opacity:1}
 .plate.is-flat[data-video] .plate__stage{display:block}
 .plate.is-flat[data-video]::after{display:none}
-/* the wordmark: crisp page type over the footage; the first O of LOOP is the orange loop */
-.mark{display:flex;align-items:center;margin:0 0 28px;font-family:var(--display);font-weight:200;font-size:clamp(2.6rem,5.4vw,5rem);line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--chalk)}
+/* the wordmark: crisp page type over the footage, on two lines */
+.mark{display:flex;flex-wrap:wrap;align-items:center;row-gap:.12em;margin:0 0 28px;font-family:var(--display);font-weight:200;font-size:clamp(2.6rem,5.4vw,5rem);line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--chalk)}
 .mark span{display:inline-block;flex:none}
 .mark__gap{width:.32em}
+.mark__br{flex-basis:100%;height:0}
 .mark__o{width:.74em;height:.74em;margin:0 .07em;border:.1em solid var(--orange);border-radius:50%;box-shadow:0 0 .35em rgba(242,106,18,.55),inset 0 0 .25em rgba(242,106,18,.35)}
 .paced .mark span{opacity:0;transform:translateY(.12em);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(.35s + var(--k,0) * .07s)}
 .paced .plate.is-in .mark span{opacity:1;transform:none}
-@media (max-width:700px){.mark{font-size:clamp(2.2rem,11vw,3rem);margin-bottom:20px}}
+@media (max-width:700px){.mark{font-size:clamp(1.9rem,9vw,3rem);margin-bottom:20px}}
 @media (prefers-reduced-motion:reduce){.paced .mark span{transition:none;opacity:1;transform:none}}
 .plate.is-still .plate__stage{background:var(--still) center/cover no-repeat}
 .plate.is-still .film__bar,.plate.is-still .film__progress{display:none}
@@ -321,7 +322,7 @@ svg text{font-family:var(--display)}
   <div class="film__shade" aria-hidden="true"></div>
   <div class="film__black" aria-hidden="true"></div>
   <div class="film__copy">
-    <p class="mark" aria-hidden="true"><span>L</span><span>u</span><span>c</span><span>k</span><span>y</span><span class="mark__gap"></span><span>L</span><span class="mark__o"></span><span>o</span><span>p</span></p>
+    <p class="mark" aria-hidden="true"><span>T</span><span>h</span><span>e</span><span class="mark__gap"></span><span>P</span><span>u</span><span>t</span><span>t</span><span>i</span><span>n</span><span>g</span><span class="mark__br"></span><span>D</span><span>i</span><span>s</span><span>t</span><span>r</span><span>i</span><span>c</span><span>t</span></p>
     <h1 class="film__title" id="hero-title"><span class="vh">The Putting District: </span>Mini golf <span>that goes</span> <em>upside down</em></h1>
     <p class="film__text">Eighteen Houston-themed holes, open late. The fifteenth sends your ball all the way around a loop. Opening Saturday, May 15.</p>
     <div class="film__links">
