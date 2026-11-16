@@ -109,7 +109,8 @@ svg text{font-family:var(--display)}
 .mark{display:flex;flex-wrap:wrap;align-items:center;row-gap:.12em;margin:0 0 28px;font-family:var(--display);font-weight:200;font-size:clamp(2.6rem,5.4vw,5rem);line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--chalk)}
 .mark span{display:inline-block;flex:none}
 .mark__gap{width:.32em}
-.mark__br{flex-basis:100%;height:0}
+.mark{width:max-content;max-width:calc(100vw - 2 * var(--edge))}
+.mark .mark__br{flex:0 0 100%;height:0}
 .mark__o{width:.74em;height:.74em;margin:0 .07em;border:.1em solid var(--orange);border-radius:50%;box-shadow:0 0 .35em rgba(242,106,18,.55),inset 0 0 .25em rgba(242,106,18,.35)}
 .paced .mark span{opacity:0;transform:translateY(.12em);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:calc(.35s + var(--k,0) * .07s)}
 .paced .plate.is-in .mark span{opacity:1;transform:none}
